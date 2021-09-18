@@ -1,0 +1,45 @@
+import "Uuid.alusus";
+import "Srl/Console";
+import "Srl/Array.alusus";
+import "Srl/String.alusus";
+func test{
+
+  use Uuid;
+  use Srl.Console;
+  
+   def u1: uuid_t;
+   def u2: uuid_t;
+
+   generate (u1);
+  
+  def str: array[char, 100];
+ 
+  print("Enter Uuid: ");
+  def s: array[Char, 100];
+  getString(s~ptr, 100);
+  
+  parse (s~ptr, u1);
+
+   print("Enter other Uuid: ");
+  def string1: array[Char, 100];
+  getString(string1~ptr, 100);
+  
+  parse(string1~ptr, u2);
+  
+  unparse (u1, str~ptr);
+  print("%s \n", str~ptr);
+  
+  unparse (u2, str~ptr);
+  print("%s \n", str~ptr);
+  
+  if compare (u1, u2) == 0
+  print("is equal")
+  
+  else 
+  print("is not equal");
+   
+
+}
+
+test();
+

@@ -1,0 +1,30 @@
+import "libuuid.so.1";
+import "Srl/srl";
+
+
+module Uuid {
+    def uuid_t: alias array[Char, 16];
+    @expname[uuid_generate]
+    function generate (uuid: ref[uuid_t]);
+    
+    @expname[uuid_compare]
+    function compare (uuid: ref[uuid_t], uuid2: ref[uuid_t]): Int;
+    
+    @expname[uuid_clear]
+    function clear (uuid: ref[uuid_t]);
+    
+    @expname[uuid_copy]
+    function copy(uuid: ref[uuid_t], uuid2: ref[uuid_t] );
+    
+    @expname[uuid_parse]
+    function parse(uuid: ptr[array[char]],uuid2: ref[uuid_t]): Int;
+    
+    @expname[uuid_unparse]
+    function unparse(uuid: ref[uuid_t], out: ptr[array[char]]);
+    
+    @expname[uuid_is_null]
+    function is_null(uuid: ref[uuid_t]): Int;
+}
+
+
+ 
