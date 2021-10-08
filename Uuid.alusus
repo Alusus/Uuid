@@ -1,9 +1,9 @@
 import "libuuid.so.1";
 import "Srl/srl";
 
-
 module Uuid {
     def uuid_t: alias array[Char, 16];
+
     @expname[uuid_generate]
     function generate (uuid: ref[uuid_t]);
     
@@ -26,5 +26,3 @@ module Uuid {
     function is_null(uuid: ref[uuid_t]): Int;
 }
 
-
- 
