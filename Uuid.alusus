@@ -8,21 +8,21 @@ module Uuid {
     function generate (uuid: ref[uuid_t]);
     
     @expname[uuid_compare]
-    function compare (uuid: ref[uuid_t], uuid2: ref[uuid_t]): Int;
+    function compare (uuid1: ref[uuid_t], uuid2: ref[uuid_t]): Int;
     
     @expname[uuid_clear]
     function clear (uuid: ref[uuid_t]);
     
     @expname[uuid_copy]
-    function copy(uuid: ref[uuid_t], uuid2: ref[uuid_t] );
+    function copy (dest: ref[uuid_t], src: ref[uuid_t] );
     
     @expname[uuid_parse]
-    function parse(uuid: ptr[array[char]],uuid2: ref[uuid_t]): Int;
+    function parse (str: ptr[array[char]], out: ref[uuid_t]): Int;
     
     @expname[uuid_unparse]
-    function unparse(uuid: ref[uuid_t], out: ptr[array[char]]);
+    function unparse (uuid: ref[uuid_t], out: ptr[array[char]]);
     
     @expname[uuid_is_null]
-    function is_null(uuid: ref[uuid_t]): Int;
+    function isNull (uuid: ref[uuid_t]): Int;
 }
 
