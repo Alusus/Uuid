@@ -6,10 +6,15 @@
 ## إضافة المكتبة للمشروع
  
 اشمل المكتبة في مشروعك كالتالي:
+<div dir="rtl">
+
 ```
 اشمل "مـحا"؛
 مـحا.اشمل_ملف("Alusus/Uuid"، "مـعرف_عالمي.أسس")؛
 ```
+
+</div>
+
 ```
 import "Apm";
 Apm.importFile("Alusus/Uuid");
@@ -21,9 +26,14 @@ Apm.importFile("Alusus/Uuid");
 ### أنشئ generate
 
 دالة توليد معرف عشوائي. تأخذ متغيرًا من النمط uuid_t وتضع قيمة عشوائية فيه.
+<div dir="rtl">
+
 ```
 دالة أنشئ (معرف: سند[مـعرف])؛
 ```
+
+</div>
+
 ```
 function generate (uuid: ref[uuid_t]);
 ```
@@ -31,9 +41,14 @@ function generate (uuid: ref[uuid_t]);
 ### قارن compare
 
 تقارن بين معرفين. تعيد 0 في حال كانا متطابقين و1 فيما عدا ذلك.
+<div dir="rtl">
+
 ```
 دالة قارن (معرف1: سند[مـعرف]، معرف2: سند[مـعرف]): صـحيح؛
 ```
+
+</div>
+
 ```
 function compare (uuid1: ref[uuid_t], uuid2: ref[uuid_t]): Int;
 ```
@@ -41,9 +56,14 @@ function compare (uuid1: ref[uuid_t], uuid2: ref[uuid_t]): Int;
 ### فرغ clear
 
 تمحو القيمة الموجودة في متغير.
+<div dir="rtl">
+
 ```
 دالة فرغ (معرف: سند[مـعرف])؛
 ```
+
+</div>
+
 ```
 function clear (uuid: ref[uuid_t]);
 ```
@@ -51,9 +71,14 @@ function clear (uuid: ref[uuid_t]);
 ### انسخ copy
 
 تنسخ معرفا من متغير إلى آخر. تستلم الدالة معطيين وتنسخ الثاني إلى الأول.
+<div dir="rtl">
+
 ```
 دالة انسخ (المقصد: سند[مـعرف]، المصدر: سند[مـعرف])؛
 ```
+
+</div>
+
 ```
 function copy (dest: ref[uuid_t], src: ref[uuid_t]);
 ```
@@ -61,9 +86,14 @@ function copy (dest: ref[uuid_t], src: ref[uuid_t]);
 ### اقرأ_نصا parse
 
 تحول معرفا من شكله النصي إلى الشكل الرقمي.
+<div dir="rtl">
+
 ```
 دالة اقرأ_نصا (نص: مؤشر[مصفوفة[مـحرف]]، معرف: سند[مـعرف]): صـحيح؛
 ```
+
+</div>
+
 ```
 function parse (uuid: ptr[array[char]],uuid2: ref[uuid_t]): Int;
 ```
@@ -71,9 +101,14 @@ function parse (uuid: ptr[array[char]],uuid2: ref[uuid_t]): Int;
 ### اكتب_نصا unparse
 
 تحول معرفا من شكله الرقمي إلى الشكل النصي.
+<div dir="rtl">
+
 ```
 دالة اكتب_نصا (معرف: سند[مـعرف]، ناتج: مؤشر[مصفوفة[مـحرف]])؛
 ```
+
+</div>
+
 ```
 function unparse (uuid: ref[uuid_t], out: ptr[array[char]]);
 ```
@@ -81,14 +116,21 @@ function unparse (uuid: ref[uuid_t], out: ptr[array[char]]);
 ### أهو_فارغ isNull
 
 تتحقق فيما إذا كان المعطى يحمل معرفاً أم أنه فارغ. تعيد 1 في حال كان المعطى فارغًا وإلا فترجع 0.
+<div dir="rtl">
+
 ```
 دالة أهو_فارغ (معرف: سند[مـعرف]): صـحيح؛
 ```
+
+</div>
+
 ```
 function isNull (uuid: ref[uuid_t]): Int;
 ``` 
 
 ## مثال
+
+<div dir="rtl">
 
 ```
 اشمل "مـتم/طـرفية"؛
@@ -145,6 +187,8 @@ function isNull (uuid: ref[uuid_t]): Int;
 
 اختبر()؛
 ```
+
+</div>
 
 ```
 import "Srl/Console";
