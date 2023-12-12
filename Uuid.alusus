@@ -24,5 +24,8 @@ module Uuid {
     
     @expname[uuid_is_null]
     function isNull (uuid: ref[uuid_t]): Int;
-}
 
+    func getBuildDependencies(): Array[String] {
+        return Array[String]({ String("libuuid.so.1") });
+    }
+}
