@@ -9,7 +9,7 @@ Import the library as follows:
 
 ```
 import "Apm";
-Apm.importFile("Alusus/Uuid");
+Apm.importPackage("Alusus/Uuid@0.1");
 ```
 
 ## Functions
@@ -70,7 +70,7 @@ function isNull(uuid: ref[uuid_t]): Int;
 ```
 import "Srl/Console";
 import "Apm";
-Apm.importFile("Alusus/Uuid");
+Apm.importPackage("Alusus/Uuid@0.1");
 
 func test {
     use Uuid;

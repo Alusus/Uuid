@@ -10,14 +10,14 @@
 
 ```
 اشمل "مـحا"؛
-مـحا.اشمل_ملف("Alusus/Uuid"، "مـعرف_عالمي.أسس")؛
+مـحا.اشمل_حزمة("Alusus/Uuid@0.1"، "مـعرف_عالمي.أسس")؛
 ```
 
 </div>
 
 ```
 import "Apm";
-Apm.importFile("Alusus/Uuid");
+Apm.importPackage("Alusus/Uuid@0.1");
 ```
 
 
@@ -135,7 +135,7 @@ function isNull (uuid: ref[uuid_t]): Int;
 ```
 اشمل "مـتم/طـرفية"؛
 اشمل "مـحا"؛
-مـحا.اشمل_ملف("Alusus/Uuid"، "مـعرف_عالمي.أسس")؛
+مـحا.اشمل_حزمة("Alusus/Uuid@0.1"، "مـعرف_عالمي.أسس")؛
 
 دالة اختبر {
     استخدم مـعرف_عالمي؛
@@ -193,7 +193,7 @@ function isNull (uuid: ref[uuid_t]): Int;
 ```
 import "Srl/Console";
 import "Apm";
-Apm.importFile("Alusus/Uuid");
+Apm.importPackage("Alusus/Uuid@0.1");
 
 func test {
     use Uuid;
