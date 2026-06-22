@@ -1,4 +1,4 @@
-# مـعرف_عالمي Uuid
+# مـعرف_عالمي (Uuid)
 [[English]](README.md)
 
 ربط للأسس مع مكتبة libuuid.
